@@ -38,6 +38,7 @@ int main() {
   int i, j, k, temp;
   vector <int> a = build_array(get_size());
 
+  //insertion sort
   for (i = 0; i < a.size(); i++) {
     for (j = i; j >= 1; j--) {
       if (a[j] < a[j - 1]) {
