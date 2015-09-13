@@ -18,7 +18,9 @@ int get_size() {
 
   int size;
   cout << "How many numbers would you like to sort?\n";
+  usleep(1000000);
   cout << "Type a number and hit Enter\n";
+  usleep(1000000);
   cin >> size;
   return size;
 }
@@ -26,11 +28,11 @@ int get_size() {
 vector <int> build_array(int size) {
 
   int i;
-  vector <int> a1;
+  vector <int> a;
   for (i = 0; i < size; i++) {
-    a1.push_back(uni(rng));
+    a.push_back(uni(rng));
   }
-  return a1;
+  return a;
 }
 
 vector <int> insertion_sort(vector <int> a) {
@@ -50,11 +52,16 @@ vector <int> insertion_sort(vector <int> a) {
   return a;
 }
 
+vector <int> merge_sort(vector <int> a) {
+
+  return a;
+}
+
 void print_array(vector <int> a) {
-  int k;
-  for (k = 0; k < a.size(); k++) {
-    cout << a[k] << ' ';
-    usleep(1000);
+  int i;
+  for (i = 0; i < a.size(); i++) {
+    cout << a[i] << ' ';
+    // usleep(1000000);
   }
 }
 
