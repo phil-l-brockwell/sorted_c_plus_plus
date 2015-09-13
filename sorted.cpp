@@ -50,15 +50,19 @@ vector <int> insertion_sort(vector <int> a) {
   return a;
 }
 
-int main() {
-
+void print_array(vector <int> a) {
   int k;
-  vector <int> a = build_array(get_size());
-
   for (k = 0; k < a.size(); k++) {
     cout << a[k] << ' ';
     usleep(1000);
   }
+}
+
+int main() {
+
+  vector <int> a = build_array(get_size());
+  a = insertion_sort(a);
+  print_array(a);
 
   return 0;
 }
