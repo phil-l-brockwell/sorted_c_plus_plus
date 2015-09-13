@@ -33,12 +33,9 @@ vector <int> build_array(int size) {
   return a1;
 }
 
-int main() {
+vector <int> insertion_sort(vector <int> a) {
 
-  int i, j, k, temp;
-  vector <int> a = build_array(get_size());
-
-  //insertion sort
+  int i, j, temp;
   for (i = 0; i < a.size(); i++) {
     for (j = i; j >= 1; j--) {
       if (a[j] < a[j - 1]) {
@@ -50,6 +47,13 @@ int main() {
         break;
     }
   }
+  return a;
+}
+
+int main() {
+
+  int k;
+  vector <int> a = build_array(get_size());
 
   for (k = 0; k < a.size(); k++) {
     cout << a[k] << ' ';
